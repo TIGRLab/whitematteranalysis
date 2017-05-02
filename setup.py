@@ -14,12 +14,12 @@ setup(
     description='Processing of whole-brain streamline tractography.',
     long_description=open('README.md').read(),
     ext_modules = cythonize("whitematteranalysis/*.pyx"),
-    scripts = [ 
+    scripts = [
         'bin/picktracts_converter.py',
         'bin/harden_transform_with_slicer.py',
         'bin/wm_cluster_atlas.py',
         'bin/wm_cluster_from_atlas.py',
-        'bin/wm_cluster_subject.py',
+        'bin-test/wm_cluster_subject.py',
         'bin/wm_extract_cluster.py',
         'bin/wm_laterality_all.py',
         'bin/wm_preprocess_all.py',
@@ -44,4 +44,3 @@ setup(
     ],
     include_dirs=[numpy.get_include()]
 )
-
